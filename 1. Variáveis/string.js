@@ -4,29 +4,52 @@ console.log(string);
 string = string + ' Aspas "Simples"';
 console.log(string);
 
-console.log("\nComprimento da string:", string.length);
+function length(textbox) {
+    textbox.value = textbox.value.length;
+}
 
-//toUpperCase|toLowerCase
-// console.log("String em Uppercase".toUpperCase());
-// console.log("String em Lowercase".toLowerCase());
+function toUpperCase(textbox) {
+    textbox.value = textbox.value.toUpperCase();
+}
 
-//replace
-// console.log("O Pinho gosta de mulheres".replace("mulheres", "homens"));
-// console.log("REPLACE".replace(/[E]+/g, "")); //Regex
+function toLowerCase(textbox) {
+    textbox.value = textbox.value.toLowerCase();
+}
 
-//trim
-// console.log("     t r i m     ".trim());
+function replace(textbox) {
+    textbox.value = textbox.value.replace("a", "");
+}
 
-//split
-// console.log("Java Script".split(" "));
+function replaceAll(textbox) {
+    textbox.value = textbox.value.replace(/[a]+/g, "");
+}
 
-//startsWith|endsWith
-// console.log("Batata".startsWith("Ba"));
-// console.log("Batata".endsWith("Ba"));
+function trim(textbox) {
+    textbox.value = textbox.value.trim();
+}
 
-//repeat
-// console.log("X".repeat(3));
+function split(textbox) {
+    var textboxSplit = textbox.value.split(" ");
+    console.log(textboxSplit);
+}
 
-//substring|substring
-// console.log("0123456".substring(1, 4));
-// console.log("0123456".substr(1, 4));
+function startsWith(textbox) {
+    textbox.value = textbox.value.startsWith("Ba");
+}
+
+function endsWith(textbox) {
+    textbox.value = textbox.value.endsWith("Ba");
+}
+
+function repeat(textbox) {
+    textbox.value = textbox.value.repeat(3);
+}
+
+function substring(textbox) {
+    //textbox.value = textbox.value.substring(2, 4);
+    textbox.value = textbox.value.substring(textbox.value.length / 2, textbox.value.length);
+}
+
+function substr(textbox) {
+    textbox.value = textbox.value.substr(0, textbox.value.length / 2);
+}
