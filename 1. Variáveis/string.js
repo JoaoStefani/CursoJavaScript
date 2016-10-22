@@ -46,8 +46,8 @@ function repeat(textbox) {
 }
 
 function substring(textbox) {
-    //textbox.value = textbox.value.substring(2, 4);
-    textbox.value = textbox.value.substring(textbox.value.length / 2, textbox.value.length);
+    textbox.value = textbox.value.substring(2, 4);
+    //textbox.value = textbox.value.substring(textbox.value.length / 2, textbox.value.length);
 }
 
 function substr(textbox) {
