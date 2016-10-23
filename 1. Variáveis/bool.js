@@ -35,3 +35,28 @@ function nulls(textbox) {
 function undefineds(textbox) {
     textbox.value = !!undefined + 'undefined sempre é false';
 }
+
+function operadores(textbox1, textbox2, textbox3, operador) {
+    switch(operador){
+        case 1:
+            textbox3.value = textbox1.value == textbox2.value;
+        break;
+        case 2:
+            textbox3.value = parseInt(textbox1.value) === textbox2.value.toString();
+        break;
+        case 3:
+            textbox3.value = parseInt(textbox1.value) > parseInt(textbox2.value);
+        break;
+        case 4:
+            textbox3.value = parseInt(textbox1.value) >= parseInt(textbox2.value);
+        break;
+        case 5:
+            textbox3.value = parseInt(textbox1.value) < parseInt(textbox2.value);
+        break;
+        default:
+            textbox3.value = parseInt(textbox1.value) <= parseInt(textbox2.value);
+        break;
+    }
+}
+
+
