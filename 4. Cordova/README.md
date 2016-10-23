@@ -65,3 +65,33 @@ Para rodar use o seguinte comando:
 ```
 cordova run android
 ```
+
+Para gerar um apk rode o comando:
+
+```
+cordova build --release android
+```
+
+Para gerar um apk rode o comando:
+
+```
+cordova build --release android
+```
+
+Para gerar um apk rode o comando:
+
+```
+cordova build --release android
+```
+
+Para assina o apk rode o comando:
+
+```
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore [caminho-do-apk] alias_name
+```
+
+Para gerar o apk para a playstore rode o comando:
+
+```
+/home/rafael/Android/Sdk/build-tools/25.0.0/zipalign -v 4 [caminho-do-apk] [caminho-do-apk-gerado]
+```

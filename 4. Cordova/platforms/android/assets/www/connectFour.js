@@ -51,7 +51,7 @@ var connectFour = (function () {
 
             column.childNodes[index].classList.add(player.color);
             index++;
-        }, 50);
+        }, 200);
     }
 
     function verifyWinner(ball) {
