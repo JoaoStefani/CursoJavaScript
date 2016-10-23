@@ -1,13 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .field {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    background: #eee;
     box-shadow: 2px 2px 15px #ddd;
     border-radius: 15px;
-    margin: 0 auto;
-    width: 1000px;
+    margin: 10px auto;
+    min-width: 250px;
+    width: 800px;
+    max-width: 1000px;
+    min-height: 250px;
     height: 800px;
-    background: #eee;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 .field div {
@@ -21,11 +31,9 @@
     box-shadow: 1px 1px 2px #bbb, inset -1px -1px 2px #bbb;
     width: 120px;
     height: 120px;
+    min-width: 40px;
+    min-height: 40px;
     margin: 5px;
 }
-.ball.red {
-    background: #ff7979;
-}
-.ball.blue {
-    background: #8181ff;
-}
+.ball.red { background: #ff7979; }
+.ball.blue { background: #8181ff; }
