@@ -3,7 +3,7 @@ var connectFour = (function () {
 
     var init = function () {
         player = { color: "blue" };
-
+        
         var field = document.querySelector(".field");
 
         //Criando colunas com os círculos
@@ -25,12 +25,17 @@ var connectFour = (function () {
                     return;
 
                 ballFalling = true;
-                updateColumn(this);
+                updateColumn(this, player.color);
+
+                if (player.color == "blue")
+                    player.color = "red";
+                else 
+                    player.color = "blue";
             });
         }
     };
 
-    function updateColumn(column) {
+    function updateColumn(column, color) {
         var index = 0;
         var effect = setInterval(function () {
             if (index == 6 || column.childNodes[index].marked) {
@@ -38,18 +43,17 @@ var connectFour = (function () {
                 ballFalling = false;
 
                 if (index > 0) {
-                    column.childNodes[index - 1].marked = player.color;
+                    column.childNodes[index - 1].marked = color;
                     verifyWinner(column.childNodes[index - 1]);
-                    player.color = player.color == "blue" ? "red" : "blue";
                 }
 
                 return;
             }
 
             if (index > 0)
-                column.childNodes[index - 1].classList.remove(player.color);
+                column.childNodes[index - 1].classList.remove(color);
 
-            column.childNodes[index].classList.add(player.color);
+            column.childNodes[index].classList.add(color);
             index++;
         }, 200);
     }
@@ -121,8 +125,8 @@ var connectFour = (function () {
         }
 
         if (length == 4) {
-            alert(player.color + " wins!");
-            connectFour.init();
+            alert(ball.marked + " wins!");
+            init();
         }
     }
 
