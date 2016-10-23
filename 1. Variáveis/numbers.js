@@ -1,11 +1,5 @@
-var string = "Hello Wor...É HORA DO SHOW P*&$%@";
-console.log(string);
-
-string = string + ' Aspas "Simples"';
-console.log(string);
-
 function convertToInt(textbox) {
-    let number = parseInt(textbox.value);
+    var number = parseInt(textbox.value);
     textbox.value = number;
 
     console.log(textbox.value);
@@ -13,28 +7,35 @@ function convertToInt(textbox) {
 }
 
 function convertToFloat(textbox) {
-    let number = parseFloat(textbox.value);
+    var number = parseFloat(textbox.value);
     textbox.value = number;
 
     console.log(textbox.value);
     console.log(number);
 }
 
-function toString(textbox) {
-    let number = parseInt(textbox.value);
+function convertToString(textbox) {
+    var number = parseInt(textbox.value);
     
     console.log(number);
     console.log(number.toString());
 }
 
-function toExponential(textbox) {
-    let number = parseInt(textbox.value);
-    textbox.value = Number(number.toExponential(2));
+function nanInfinity(textbox) {
+    var nan = 10 * "a";
+    var infinity = 10 / 0;
+
+    textbox.value = nan + " | " + infinity;
 }
 
 function toFixed(textbox) {
-    let number = parseFloat(textbox.value);
+    var number = parseFloat(textbox.value);
     textbox.value = number.toFixed(2);
+}
+
+function toPrecision(textbox) {
+    var number = parseFloat(textbox.value);
+    textbox.value = number.toPrecision(3);
 }
 
 function MAX_VALUE(textbox) {
