@@ -37,6 +37,11 @@ function toFixed(textbox) {
     textbox.value = number.toFixed(2);
 }
 
+function toPrecision(textbox) {
+    let number = parseFloat(textbox.value);
+    textbox.value = number.toPrecision(2);
+}
+
 function MAX_VALUE(textbox) {
     textbox.value = Number.MAX_VALUE;
 }
