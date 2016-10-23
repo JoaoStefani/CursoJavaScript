@@ -1,8 +1,3 @@
-var agentesDaCia = [
-    "James “Jim” Phelps",
-    "Jason Bourne"
-];
-
 function quaisAgentesVoceConhece(textbox1, textbox2) {
     respostaDoAgenteK();
     respostaDoPresidenteDosEUA();
