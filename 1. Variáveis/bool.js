@@ -1,9 +1,3 @@
-var string = "Hello Wor...É HORA DO SHOW P*&$%@";
-console.log(string);
-
-string = string + ' Aspas "Simples"';
-console.log(string);
-
 function strings(textbox) {
     textbox.value = !!textbox.value;
 }
@@ -21,7 +15,7 @@ function arrays(textbox) {
 }
 
 function functions(textbox) {
-    function qualquer_coisa_so_pra_ver_se_e_true_ou_false(){
+    function qualquer_coisa_so_pra_ver_se_e_true_ou_false() {
 
     }
 
@@ -29,34 +23,32 @@ function functions(textbox) {
 }
 
 function nulls(textbox) {
-    textbox.value = !!null + 'null sempre é false';
+    textbox.value = !!null + ' - null sempre é false';
 }
 
 function undefineds(textbox) {
-    textbox.value = !!undefined + 'undefined sempre é false';
+    textbox.value = !!undefined + ' - undefined sempre é false';
 }
 
 function operadores(textbox1, textbox2, textbox3, operador) {
-    switch(operador){
+    switch (operador) {
         case 1:
             textbox3.value = textbox1.value == textbox2.value;
-        break;
+            break;
         case 2:
             textbox3.value = parseInt(textbox1.value) === textbox2.value.toString();
-        break;
+            break;
         case 3:
             textbox3.value = parseInt(textbox1.value) > parseInt(textbox2.value);
-        break;
+            break;
         case 4:
             textbox3.value = parseInt(textbox1.value) >= parseInt(textbox2.value);
-        break;
+            break;
         case 5:
             textbox3.value = parseInt(textbox1.value) < parseInt(textbox2.value);
-        break;
+            break;
         default:
             textbox3.value = parseInt(textbox1.value) <= parseInt(textbox2.value);
-        break;
+            break;
     }
 }
-
-
