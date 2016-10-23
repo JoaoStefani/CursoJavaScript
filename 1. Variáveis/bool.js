@@ -33,7 +33,7 @@ function undefineds(textbox) {
 function operadores(textbox1, textbox2, textbox3, operador) {
     switch (operador) {
         case 1:
-            textbox3.value = textbox1.value == textbox2.value;
+            textbox3.value = parseInt(textbox1.value) == textbox2.value.toString();
             break;
         case 2:
             textbox3.value = parseInt(textbox1.value) === textbox2.value.toString();
