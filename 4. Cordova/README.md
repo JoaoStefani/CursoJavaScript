@@ -72,16 +72,10 @@ Para gerar um apk rode o comando:
 cordova build --release android
 ```
 
-Para gerar um apk rode o comando:
+Para criar uma chave para assinar o apk rode o comando 
 
 ```
-cordova build --release android
-```
-
-Para gerar um apk rode o comando:
-
-```
-cordova build --release android
+keytool -genkey -v -keystore [nome-da-chave].keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
 ```
 
 Para assina o apk rode o comando:
